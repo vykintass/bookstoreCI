@@ -35,5 +35,5 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: newman-report-${{ matrix.os }}
-          # path: report-${{ matrix.os }}.html
+          # path: report-${{ matrix.os }}.htmla
           path: report.html
