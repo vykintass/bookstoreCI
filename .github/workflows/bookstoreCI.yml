@@ -8,7 +8,7 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest, windows-latest, macos-latest]
-###
+
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v4
@@ -19,7 +19,7 @@ jobs:
       - name: Install Newman and Newman report
         run: |
           npm install -g newman
-          npm isntall -g newman-reporter-htmlextra
+          npm install -g newman-reporter-htmlextra
       - name: Fetch Postman collection
         run: |
           curl -X GET "https://api.getpostman.com/collections/36297491-1dcf463f-ea01-4e84-924f-6665890ab8e9" \
